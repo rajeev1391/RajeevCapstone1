@@ -1,4 +1,4 @@
 FROM httpd:2.4
 WORKDIR /usr/local/apache2/htdocs/
-COPY ./indexa.html .
+COPY ./index.html .
 EXPOSE 80
