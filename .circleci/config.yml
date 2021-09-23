@@ -66,7 +66,7 @@ jobs:
             
             # Deployment - rolling deployment 
             kubectl apply -f ./frontendapp.yml
-            kubectl apply -f ./services.yml
+      #      kubectl apply -f ./services.yml
             kubectl get deployment front-end-app
             kubectl rollout restart deployment/front-end-app
             
@@ -86,11 +86,11 @@ workflows:
         requires: [docker/hadolint]
         image: rajeev1391/capston_c1
         tag: latest
- #    - create-rajeev-cluster:  
- #       requires: [docker/publish]
- #       cluster-name: capstone
-     - testKucluster:
+     - create-rajeev-cluster:  
         requires: [docker/publish]
-#        requires: [create-rajeev-cluster]
+        cluster-name: capstone
+     - testKucluster:
+#        requires: [docker/publish]
+        requires: [create-rajeev-cluster]
         cluster-name: capstone 
         
