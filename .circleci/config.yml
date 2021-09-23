@@ -80,11 +80,11 @@ jobs:
 workflows:
   default:
     jobs:
-     - docker:
+     - docker/hadolint:
         dockerfiles: ./Dockerfile
    #     ignore-rules: 'DL4005,DL3008'
      - docker/publish:
-        requires: [docker]
+        requires: [docker/hadolint]
         image: rajeev1391/capston_c1
         tag: latest
  #    - create-rajeev-cluster:  
