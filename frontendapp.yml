@@ -12,8 +12,8 @@ spec:
       app: front-end-app
   strategy:
     rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+      maxSurge: 50%
+      maxUnavailable: 50%
     type: RollingUpdate
   template:
     metadata:
@@ -21,7 +21,7 @@ spec:
         app: front-end-app
     spec:
       containers:
-      - image: rajeev1391/capston_b1
+      - image: rajeev1391/capston_c1
         imagePullPolicy: Always
         name: front-end-app
         ports:
