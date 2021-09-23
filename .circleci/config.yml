@@ -81,8 +81,7 @@ workflows:
   default:
     jobs:
      - docker/hadolint:
-        dockerfiles: ./Dockerfile1
-   #     ignore-rules: 'DL4005,DL3008'
+        dockerfiles: ./Dockerfile
      - docker/publish:
         requires: [docker/hadolint]
         image: rajeev1391/capston_c1
