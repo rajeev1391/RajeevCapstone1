@@ -59,7 +59,7 @@ jobs:
       - run:
           name: deployment
           command: |
-            # Check the cluster/nodes/pods status
+            # create the cluster, checks the nodes and test the cluster status
             kubectl get services
             kubectl get nodes
             kubectl get pods
