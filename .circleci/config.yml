@@ -70,7 +70,7 @@ jobs:
             kubectl get deployment front-end-app
             kubectl rollout restart deployment/front-end-app
             
-            # Check the cluster/nodes/pods status
+            # create the cluster, checks the nodes and test the cluster status
             sleep 30
             kubectl get services
             kubectl get nodes
