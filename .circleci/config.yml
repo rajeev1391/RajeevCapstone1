@@ -66,16 +66,16 @@ jobs:
             
             # Deployment - rolling deployment 
             kubectl apply -f ./frontendapp.yml
-     #       kubectl apply -f ./services.yml
+            kubectl apply -f ./services.yml
             kubectl get deployment front-end-app
             kubectl rollout restart deployment/front-end-app
             
             # Check the cluster/nodes/pods status
-            sleep 20
+            sleep 30
             kubectl get services
             kubectl get nodes
             kubectl get pods
-            sleep 20
+            sleep 30
             
 workflows:
   default:
